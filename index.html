@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,188 +12,330 @@
 
 <meta property="og:title" content="Bódis András – klinikai szakpszichológus">
 <meta property="og:description" content="Klinikai szakpszichológiai és pszichoterápiás munka egyéni terápiás keretek között.">
-<meta property="og:image" content="portrait.jpg">
+<meta property="og:image" content="./portrait.jpg">
 <meta property="og:type" content="website">
 
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "Person",
- "name": "Bódis András",
- "jobTitle": "Clinical Psychologist",
- "url": "https://bodisandras.com",
- "email": "contact@bodisandras.com",
- "address": {
-   "@type": "PostalAddress",
-   "addressLocality": "Budapest",
-   "addressCountry": "Hungary"
- }
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Bódis András",
+  "jobTitle": "Clinical Psychologist",
+  "url": "https://bodisandras.com",
+  "email": "contact@bodisandras.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Budapest",
+    "addressCountry": "Hungary"
+  }
 }
 </script>
 
 <style>
-
 body{
-font-family: Arial, sans-serif;
-max-width:900px;
-margin:auto;
-padding:40px;
-line-height:1.6;
-color:#222;
-background:#fafafa;
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  line-height: 1.6;
+  color: #222;
+  background: #fafafa;
 }
 
 h1{
-font-size:48px;
-margin-bottom:10px;
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
 h2{
-margin-top:60px;
-font-size:26px;
+  margin-top: 60px;
+  font-size: 26px;
+}
+
+h3{
+  margin-top: 20px;
 }
 
 .subtitle{
-font-size:20px;
-color:#555;
-margin-bottom:30px;
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 30px;
 }
 
 .center{
-text-align:center;
+  text-align: center;
 }
 
 .portrait{
-width:220px;
-border-radius:12px;
-margin-bottom:20px;
+  width: 220px;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 .language{
-position:absolute;
-top:20px;
-right:20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .langbtn{
-border:1px solid #ccc;
-padding:6px 10px;
-margin-left:5px;
-cursor:pointer;
-background:white;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  background: white;
 }
 
 .box{
-background:#f2f2f2;
-padding:20px;
-border-radius:6px;
-margin-top:20px;
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 20px;
 }
 
 ul{
-margin-top:10px;
+  margin-top: 10px;
 }
 
 a{
-color:#2a5db0;
-text-decoration:none;
+  color: #2a5db0;
+  text-decoration: none;
 }
 
 footer{
-margin-top:80px;
-font-size:14px;
-color:#666;
+  margin-top: 80px;
+  font-size: 14px;
+  color: #666;
 }
-
 </style>
 
 <script>
-
 function setLanguage(lang){
+  document.querySelectorAll('.lang').forEach(el => {
+    el.style.display = 'none';
+  });
 
-document.querySelectorAll('.lang').forEach(el=>{
-el.style.display='none';
-});
-
-document.querySelectorAll('.'+lang).forEach(el=>{
-el.style.display='block';
-});
-
+  document.querySelectorAll('.' + lang).forEach(el => {
+    el.style.display = 'block';
+  });
 }
 
-window.onload=function(){
-setLanguage('hu');
+window.onload = function(){
+  setLanguage('hu');
 }
-
 </script>
-
 </head>
 
 <body>
 
 <div class="language">
-<button class="langbtn" onclick="setLanguage('hu')">HU</button>
-<button class="langbtn" onclick="setLanguage('en')">EN</button>
+  <button class="langbtn" onclick="setLanguage('hu')">HU</button>
+  <button class="langbtn" onclick="setLanguage('en')">EN</button>
 </div>
 
 <div class="center">
+  <img src="./portrait.jpg" alt="Bódis András klinikai szakpszichológus" class="portrait">
 
-<img src="./portrait.jpg" alt="Bódis András klinikai szakpszichológus" class="portrait">
+  <h1 class="lang hu">Bódis András</h1>
+  <h1 class="lang en">András Bódis</h1>
 
-<h1 class="lang hu">Bódis András</h1>
-<h1 class="lang en">András Bódis</h1>
-
-<div class="subtitle lang hu">klinikai szakpszichológus</div>
-<div class="subtitle lang en">clinical psychologist</div>
-
+  <div class="subtitle lang hu">klinikai szakpszichológus</div>
+  <div class="subtitle lang en">clinical psychologist</div>
 </div>
 
 <div class="center">
+  <h3 class="lang hu">Üdvözlöm!</h3>
+  <h3 class="lang en">Welcome!</h3>
 
-<h3 class="lang hu">Üdvözlöm!</h3>
-<h3 class="lang en">Welcome!</h3>
+  <p class="lang hu">
+    Ha valaki pszichológiai segítséget keres, általában nem könnyű eldönteni, hogy kihez forduljon.
+    Ezért fontosnak tartom, hogy ezen az oldalon röviden bemutassam, milyen szakmai háttérrel dolgozom,
+    milyen szemléletben gondolkodom, és milyen keretek között vállalok pszichoterápiás munkát.
+  </p>
+
+  <p class="lang en">
+    When someone is looking for psychological help, it is often not easy to decide whom to turn to.
+    On this page I briefly introduce my professional background, my clinical approach,
+    and the framework within which I undertake psychotherapeutic work.
+  </p>
+</div>
+
+<h2 class="lang hu">Ki vagyok</h2>
+<h2 class="lang en">Who I am</h2>
 
 <p class="lang hu">
-Ha valaki pszichológiai segítséget keres, általában nem könnyű eldönteni, hogy kihez forduljon.
-Ezért fontosnak tartom, hogy ezen az oldalon röviden bemutassam, milyen szakmai háttérrel dolgozom,
-milyen szemléletben gondolkodom, és milyen keretek között vállalok pszichoterápiás munkát.
+  Klinikai szakpszichológusként pszichiátriai és pszichoterápiás ambuláns ellátásban
+  szereztem több mint egy évtizedes szakmai tapasztalatot.
 </p>
 
 <p class="lang en">
-When someone is looking for psychological help, it is often not easy to decide whom to turn to.
-On this page I briefly introduce my professional background, my clinical approach,
-and the framework within which I undertake psychotherapeutic work.
+  As a clinical psychologist, I have gained more than a decade of professional experience
+  in psychiatric and psychotherapeutic outpatient care.
 </p>
 
-</div>
+<p class="lang hu">
+  Munkám során pszichodiagnosztikai vizsgálatokat végzek,
+  egyéni pszichoterápiás folyamatokat vezetek,
+  valamint több éven keresztül analitikus szemléletű kiscsoportokat is vezettem.
+</p>
+
+<p class="lang en">
+  My work includes psychological assessment, individual psychotherapy,
+  and several years of leading analytically oriented small groups.
+</p>
+
+<p class="lang hu">
+  Szakmai tapasztalatom kiterjed kórházi pszichiátriai ellátásra,
+  ambuláns pszichológiai munkára,
+  valamint egyéni és csoportos terápiás helyzetekre.
+</p>
+
+<p class="lang en">
+  My professional background includes hospital-based psychiatric care,
+  outpatient psychological work,
+  as well as individual and group therapeutic settings.
+</p>
+
+<h2 class="lang hu">Szemléletmódom</h2>
+<h2 class="lang en">Clinical approach</h2>
+
+<p class="lang hu">
+  Munkám szemléleti alapját az egzisztenciális pszichológiai,
+  pszichoterápiás valamint fenomenológiai megközelítés adja.
+</p>
+
+<p class="lang en">
+  My work is grounded in existential psychology,
+  psychotherapy,
+  and phenomenological thinking.
+</p>
+
+<p class="lang hu">
+  Ez a szemlélet abból indul ki,
+  hogy a pszichés nehézségek nem csupán tünetek formájában jelennek meg,
+  hanem egy adott ember teljes élethelyzetéhez,
+  kapcsolati tapasztalataihoz és személyes történetéhez kapcsolódnak.
+</p>
+
+<p class="lang en">
+  This approach starts from the view that psychological difficulties
+  do not appear merely as symptoms,
+  but are connected to a person's life situation,
+  relational experiences,
+  and personal history.
+</p>
+
+<p class="lang hu">
+  A pszichoterápia számomra nem pusztán a tünetek csökkentéséről szól,
+  hanem arról is,
+  hogy az ember képes legyen saját működésére rálátni
+  és felelősen viszonyulni ahhoz.
+</p>
+
+<p class="lang en">
+  For me, psychotherapy is not only about symptom reduction,
+  but also about helping the person develop insight into their own functioning
+  and relate to it in a responsible way.
+</p>
+
+<p class="lang hu">
+  Tapasztalatom szerint valódi változás csak olyan terápiás helyzetben jöhet létre,
+  ahol az embernek nem kell védekeznie,
+  és lehetősége nyílik arra,
+  hogy saját működésével szembenézzen.
+</p>
+
+<p class="lang en">
+  In my experience, real change can only emerge in a therapeutic situation
+  in which a person no longer needs to defend themselves
+  and is able to face their own way of functioning.
+</p>
+
+<h2 class="lang hu">Milyen esetekben vállalok pszichoterápiás munkát</h2>
+<h2 class="lang en">Areas in which I undertake psychotherapeutic work</h2>
+
+<ul class="lang hu">
+  <li>szorongásos problémák</li>
+  <li>hangulati nehézségek</li>
+  <li>élethelyzeti krízisek</li>
+  <li>kapcsolati problémák</li>
+  <li>identitással és önértékeléssel kapcsolatos kérdések</li>
+  <li>veszteség és gyász</li>
+  <li>traumatikus élmények feldolgozása</li>
+  <li>életvezetési nehézségek</li>
+</ul>
+
+<ul class="lang en">
+  <li>anxiety-related difficulties</li>
+  <li>mood-related problems</li>
+  <li>life crises</li>
+  <li>relationship difficulties</li>
+  <li>questions related to identity and self-esteem</li>
+  <li>loss and grief</li>
+  <li>processing traumatic experiences</li>
+  <li>difficulties in life management</li>
+</ul>
+
+<h2 class="lang hu">A közös munka keretei</h2>
+<h2 class="lang en">Framework of working together</h2>
+
+<p class="lang hu">
+  Amikor valaki segítséget kér tőlem,
+  az első személyes találkozás során közösen mérjük fel,
+  hogy az adott helyzetben milyen típusú segítség lehet megfelelő.
+</p>
+
+<p class="lang en">
+  When someone seeks help from me,
+  the first personal meeting is used to jointly assess
+  what type of help may be appropriate in the given situation.
+</p>
+
+<p class="lang hu">
+  A pszichoterápiás ülések időtartama 50 perc,
+  és legalább heti egy alkalommal zajlanak.
+</p>
+
+<p class="lang en">
+  Psychotherapy sessions are 50 minutes long
+  and usually take place once a week.
+</p>
+
+<p class="lang hu">
+  Ha közös terápiás munkára nem kerül sor,
+  akkor is fontosnak tartom,
+  hogy a konzultáció során világossá váljon,
+  milyen irányban érdemes további segítséget keresni.
+</p>
+
+<p class="lang en">
+  Even if a shared therapeutic process does not begin,
+  I consider it important that the consultation helps clarify
+  what direction of further help may be worth seeking.
+</p>
 
 <h2 class="lang hu">Kapcsolat</h2>
 <h2 class="lang en">Contact</h2>
 
 <div class="box">
+  <p class="lang hu">
+    Időpont egyeztetés e-mailben történik.
+  </p>
 
-<p class="lang hu">
-Időpont egyeztetés e-mailben történik.
-</p>
+  <p class="lang en">
+    Appointments are arranged by email.
+  </p>
 
-<p class="lang en">
-Appointments are arranged by email.
-</p>
-
-<p>
-<a href="mailto:contact@bodisandras.com">contact@bodisandras.com</a>
-</p>
-
+  <p>
+    <a href="mailto:contact@bodisandras.com">contact@bodisandras.com</a>
+  </p>
 </div>
 
 <footer>
-
-<hr>
-
-<p><strong>Bódis András – klinikai szakpszichológus</strong></p>
-<p>Egészségügyi működési nyilvántartási szám: 2525</p>
-<p>Budapest, Magyarország</p>
-
+  <hr>
+  <p><strong>Bódis András – klinikai szakpszichológus</strong></p>
+  <p>Egészségügyi működési nyilvántartási szám: 2525</p>
+  <p>Budapest, Magyarország</p>
 </footer>
 
 </body>
