@@ -1,399 +1,345 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bódis András | Klinikai szakpszichológus</title>
-  <meta name="description" content="Bódis András klinikai szakpszichológus személyes honlapja." />
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#1f1f1f;
-      --muted:#666666;
-      --line:#e6e6e6;
-      --soft:#f7f7f7;
-      --link:#2f5fb3;
-      --max:900px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    *{
-      box-sizing:border-box;
-    }
+<title>Bódis András | Klinikai szakpszichológus</title>
 
-    html{
-      scroll-behavior:smooth;
-    }
+<meta name="description" content="Bódis András klinikai szakpszichológus személyes honlapja.">
 
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height:1.7;
-    }
+<style>
 
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:0 24px;
-    }
+body{
+font-family: Arial, sans-serif;
+max-width:900px;
+margin:auto;
+padding:40px;
+line-height:1.7;
+color:#222;
+}
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      background:rgba(255,255,255,0.96);
-      backdrop-filter:blur(8px);
-      border-bottom:1px solid var(--line);
-    }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+}
 
-    .topbar{
-      min-height:72px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
-      padding:14px 0;
-    }
+h1{
+font-size:40px;
+margin-bottom:10px;
+}
 
-    .brand{
-      font-size:18px;
-      font-weight:700;
-      letter-spacing:0.2px;
-    }
+h2{
+margin-top:40px;
+}
 
-    .lang-switch{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      font-size:14px;
-    }
+.role{
+color:#666;
+margin-bottom:20px;
+}
 
-    .lang-btn{
-      border:1px solid var(--line);
-      background:#fff;
-      color:var(--text);
-      padding:8px 12px;
-      border-radius:999px;
-      cursor:pointer;
-      font-size:14px;
-      transition:all 0.2s ease;
-    }
+.lang-btn{
+border:1px solid #ddd;
+background:white;
+padding:6px 12px;
+margin-left:5px;
+cursor:pointer;
+}
 
-    .lang-btn:hover{
-      border-color:#bdbdbd;
-    }
+.lang-btn.active{
+background:#222;
+color:white;
+}
 
-    .lang-btn.active{
-      background:var(--text);
-      color:#fff;
-      border-color:var(--text);
-    }
+.lang{
+display:none;
+}
 
-    main{
-      padding:56px 0 72px;
-    }
+.lang.active{
+display:block;
+}
 
-    section{
-      padding:0 0 44px;
-      border-bottom:1px solid var(--line);
-      margin-bottom:44px;
-    }
+.intro-layout{
+display:flex;
+gap:40px;
+align-items:flex-start;
+margin-bottom:30px;
+}
 
-    section:last-child{
-      border-bottom:none;
-      margin-bottom:0;
-      padding-bottom:0;
-    }
+.intro-text{
+flex:1;
+}
 
-    h1{
-      font-size:46px;
-      line-height:1.1;
-      margin:0 0 10px;
-      font-weight:700;
-    }
+.portrait{
+width:320px;
+border-radius:6px;
+}
 
-    h2{
-      font-size:28px;
-      line-height:1.2;
-      margin:0 0 18px;
-      font-weight:700;
-    }
+.contact{
+background:#f5f5f5;
+padding:20px;
+margin-top:20px;
+}
 
-    p{
-      margin:0 0 16px;
-      font-size:18px;
-    }
+a{
+color:#2c5aa0;
+text-decoration:none;
+}
 
-    ul{
-      margin:0 0 16px 22px;
-      padding:0;
-    }
+a:hover{
+text-decoration:underline;
+}
 
-    li{
-      margin:0 0 8px;
-      font-size:18px;
-    }
+footer{
+margin-top:60px;
+font-size:14px;
+color:#666;
+}
 
-    .intro{
-      padding-top:10px;
-    }
+@media (max-width:700px){
 
-    .role{
-      font-size:20px;
-      color:var(--muted);
-      margin-bottom:22px;
-    }
+.intro-layout{
+flex-direction:column;
+}
 
-    .contact-box{
-      background:var(--soft);
-      border:1px solid var(--line);
-      border-radius:12px;
-      padding:22px;
-      margin-top:10px;
-    }
+.portrait{
+width:100%;
+max-width:420px;
+}
 
-    a{
-      color:var(--link);
-      text-decoration:none;
-    }
+}
 
-    a:hover{
-      text-decoration:underline;
-    }
-
-    .lang{
-      display:none;
-    }
-
-    .lang.active{
-      display:block;
-    }
-
-    footer{
-      color:var(--muted);
-      font-size:14px;
-      padding:18px 0 40px;
-    }
-
-    @media (max-width: 720px){
-      .topbar{
-        align-items:flex-start;
-        flex-direction:column;
-      }
-
-      h1{
-        font-size:36px;
-      }
-
-      h2{
-        font-size:24px;
-      }
-
-      p, li{
-        font-size:17px;
-      }
-
-      .role{
-        font-size:18px;
-      }
-    }
-  </style>
+</style>
 </head>
+
+
 <body>
-  <header>
-    <div class="wrap topbar">
-      <div class="brand">Bódis András</div>
-      <div class="lang-switch" aria-label="Nyelvválasztó / Language switcher">
-        <button class="lang-btn" data-lang="hu">HU</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-      </div>
-    </div>
-  </header>
 
-  <main class="wrap">
-    <div id="content-hu" class="lang">
-      <section class="intro">
-        <h1>Bódis András</h1>
-        <div class="role">klinikai szakpszichológus</div>
+<header>
 
-        <h2>Üdvözlöm!</h2>
-        <p>Kedves Látogató!</p>
-        <p>Ha valaki pszichológiai segítséget keres, általában nem könnyű eldönteni, hogy kihez forduljon. Ezért fontosnak tartom, hogy ezen az oldalon röviden bemutassam, milyen szakmai háttérrel dolgozom, milyen szemléletben gondolkodom, és milyen keretek között vállalok pszichoterápiás munkát.</p>
-      </section>
+<div><strong>Bódis András</strong></div>
 
-      <section>
-        <h2>Ki vagyok</h2>
-        <p>Klinikai szakpszichológusként pszichiátriai és pszichoterápiás ambuláns ellátásban szereztem több mint egy évtizedes szakmai tapasztalatot.</p>
-        <p>Munkám során pszichodiagnosztikai vizsgálatokat végzek, egyéni pszichoterápiás folyamatokat vezetek, valamint több éven keresztül analitikus szemléletű kiscsoportokat is vezettem.</p>
-        <p>Szakmai tapasztalatom kiterjed kórházi pszichiátriai ellátásra, ambuláns pszichológiai munkára, valamint egyéni és csoportos terápiás helyzetekre.</p>
-        <p>A terápiás munkában számomra fontos a pontos diagnosztikai gondolkodás, a szakmai keretek tisztasága és az, hogy a közös munka minden esetben az adott ember egyedi helyzetéhez igazodjon.</p>
-      </section>
+<div>
+<button class="lang-btn" data-lang="hu">HU</button>
+<button class="lang-btn" data-lang="en">EN</button>
+</div>
 
-      <section>
-        <h2>Szemléletmódom</h2>
-        <p>Munkám szemléleti alapját az egzisztenciális pszichológiai, pszichoterápiás és fenomenológiai megközelítés adja.</p>
-        <p>Ez a szemlélet abból indul ki, hogy a pszichés nehézségek nem csupán tünetek formájában jelennek meg, hanem egy adott ember teljes élethelyzetéhez, kapcsolati tapasztalataihoz és személyes történetéhez kapcsolódnak.</p>
-        <p>A pszichoterápia számomra nem pusztán a tünetek csökkentéséről szól, hanem arról is, hogy az ember képes legyen saját működésére rálátni és felelősen viszonyulni ahhoz.</p>
-        <p>A terápiás munka során ezért különösen fontos annak megértése, hogy a pszichés nehézségek milyen belső működési mintákhoz, kapcsolati tapasztalatokhoz és élethelyzeti összefüggésekhez kapcsolódnak.</p>
-        <p>Tapasztalatom szerint valódi változás csak olyan terápiás helyzetben jöhet létre, ahol az embernek nem kell védekeznie, és lehetősége nyílik arra, hogy saját működésével szembenézzen.</p>
-        <p>A pszichoterápia ezért mindig egy közös gondolkodási folyamat, amelynek során fokozatosan válik érthetővé az adott helyzet pszichológiai szerkezete.</p>
-      </section>
+</header>
 
-      <section>
-        <h2>Milyen esetekben vállalok pszichoterápiás munkát</h2>
-        <p>Az alábbi helyzetekben fordulhat hozzám segítségért:</p>
-        <ul>
-          <li>szorongásos problémák</li>
-          <li>hangulati zavarok</li>
-          <li>élethelyzeti krízisek</li>
-          <li>kapcsolati nehézségek</li>
-          <li>identitással és önértékeléssel kapcsolatos kérdések</li>
-          <li>veszteség és gyász</li>
-          <li>traumatikus élmények feldolgozása</li>
-          <li>életvezetési és döntési nehézségek</li>
-        </ul>
-        <p>A közös munka történhet:</p>
-        <ul>
-          <li>pszichodiagnosztikai kivizsgálás formájában</li>
-          <li>pszichoterápiás első interjú keretében</li>
-          <li>egyéni pszichoterápiás folyamatban</li>
-        </ul>
-      </section>
 
-      <section>
-        <h2>A közös munka keretei</h2>
-        <p>Amikor valaki segítséget kér tőlem, az első személyes találkozás során közösen mérjük fel, hogy az adott helyzetben milyen típusú segítség lehet megfelelő.</p>
-        <p>Ennek alapján indulhat pszichodiagnosztikai kivizsgálás vagy pszichoterápiás folyamat.</p>
-        <p>A pszichoterápiás ülések időtartama 50 perc, és legalább heti egy alkalommal zajlanak.</p>
-        <p>Ha közös terápiás munkára végül nem kerül sor, akkor is fontosnak tartom, hogy a konzultáció során világossá váljon, milyen irányban érdemes tovább segítséget keresni.</p>
-      </section>
 
-      <section>
-        <h2>Kapcsolat</h2>
-        <p>Időpont egyeztetés e-mailben történik.</p>
-        <div class="contact-box">
-          <p><a href="mailto:contact@bodisandras.com">contact@bodisandras.com</a></p>
-        </div>
-      </section>
-    </div>
+<div id="content-hu" class="lang">
 
-    <div id="content-en" class="lang">
-      <section class="intro">
-        <h1>András Bódis</h1>
-        <div class="role">clinical psychologist</div>
+<div class="intro-layout">
 
-        <h2>Welcome</h2>
-        <p>Dear Visitor,</p>
-        <p>When someone is looking for psychological help, it is often not easy to decide whom to turn to. For this reason, I find it important to briefly introduce on this website my professional background, my clinical approach, and the framework within which I undertake psychotherapeutic work.</p>
-      </section>
+<img src="bodis-andras.jpg" alt="Bódis András klinikai szakpszichológus" class="portrait">
 
-      <section>
-        <h2>Who I am</h2>
-        <p>As a clinical psychologist, I have gained more than a decade of professional experience in psychiatric and psychotherapeutic outpatient care.</p>
-        <p>My work includes psychological assessment, individual psychotherapeutic processes, as well as several years of experience in leading analytically oriented small groups.</p>
-        <p>My professional background includes hospital-based psychiatric care, outpatient psychological work, and both individual and group therapeutic settings.</p>
-        <p>In therapeutic work, I consider precise diagnostic thinking, clear professional boundaries, and careful adaptation to each person’s unique situation to be essential.</p>
-      </section>
+<div class="intro-text">
 
-      <section>
-        <h2>My clinical approach</h2>
-        <p>My work is grounded in existential psychology, psychotherapy, and phenomenological thinking.</p>
-        <p>This approach starts from the view that psychological difficulties do not appear merely as symptoms, but are connected to a person’s life situation, relational experiences, and personal history as a whole.</p>
-        <p>For me, psychotherapy is not only about symptom reduction, but also about helping the person develop insight into their own functioning and relate to it in a responsible way.</p>
-        <p>This is why I consider it particularly important to understand how psychological difficulties are connected to internal patterns of functioning, relational experiences, and life circumstances.</p>
-        <p>In my experience, real change can only emerge in a therapeutic situation in which a person no longer needs to defend themselves, and is able to face their own way of functioning.</p>
-        <p>Psychotherapy is therefore always a shared process of thinking, through which the psychological structure of a given situation gradually becomes more understandable.</p>
-      </section>
+<h1>Bódis András</h1>
 
-      <section>
-        <h2>Areas in which I undertake psychotherapeutic work</h2>
-        <p>You may turn to me for help in the following situations:</p>
-        <ul>
-          <li>anxiety-related difficulties</li>
-          <li>mood-related problems</li>
-          <li>life crises</li>
-          <li>relationship difficulties</li>
-          <li>questions related to identity and self-esteem</li>
-          <li>loss and grief</li>
-          <li>processing traumatic experiences</li>
-          <li>difficulties in life management and decision-making</li>
-        </ul>
-        <p>Our work together may take the form of:</p>
-        <ul>
-          <li>psychological assessment</li>
-          <li>an initial psychotherapeutic interview</li>
-          <li>an individual psychotherapeutic process</li>
-        </ul>
-      </section>
+<div class="role">klinikai szakpszichológus</div>
 
-      <section>
-        <h2>Framework of working together</h2>
-        <p>When someone seeks help from me, the first personal meeting is used to jointly assess what type of help may be appropriate in the given situation.</p>
-        <p>Based on this, the process may begin either as a psychological assessment or as a psychotherapeutic process.</p>
-        <p>Psychotherapy sessions are 50 minutes long and take place at least once a week.</p>
-        <p>Even if a shared therapeutic process does not ultimately begin, I consider it important that the consultation helps clarify what direction of further help may be worth seeking.</p>
-      </section>
+<h2>Üdvözlöm</h2>
 
-      <section>
-        <h2>Contact</h2>
-        <p>Appointments are arranged by e-mail.</p>
-        <div class="contact-box">
-          <p><a href="mailto:contact@bodisandras.com">contact@bodisandras.com</a></p>
-        </div>
-      </section>
-    </div>
-  </main>
+<p>Kedves Látogató!</p>
 
-  <footer class="wrap">
-    <p>© Bódis András</p>
-  </footer>
+<p>Ha valaki pszichológiai segítséget keres, általában nem könnyű eldönteni, hogy kihez forduljon. Ezért fontosnak tartom, hogy ezen az oldalon röviden bemutassam, milyen szakmai háttérrel dolgozom, milyen szemléletben gondolkodom, és milyen keretek között vállalok pszichoterápiás munkát.</p>
 
-  <script>
-    (function () {
-      const defaultLang = "hu";
-      const storageKey = "bodisandras-language";
-      const supported = ["hu", "en"];
+</div>
+</div>
 
-      function setLanguage(lang) {
-        const selected = supported.includes(lang) ? lang : defaultLang;
 
-        document.documentElement.lang = selected;
 
-        document.querySelectorAll(".lang").forEach(el => {
-          el.classList.remove("active");
-        });
+<h2>Ki vagyok</h2>
 
-        const target = document.getElementById("content-" + selected);
-        if (target) {
-          target.classList.add("active");
-        }
+<p>Klinikai szakpszichológusként pszichiátriai és pszichoterápiás ambuláns ellátásban szereztem több mint egy évtizedes szakmai tapasztalatot.</p>
 
-        document.querySelectorAll(".lang-btn").forEach(btn => {
-          btn.classList.toggle("active", btn.dataset.lang === selected);
-          btn.setAttribute("aria-pressed", btn.dataset.lang === selected ? "true" : "false");
-        });
+<p>Munkám során pszichodiagnosztikai vizsgálatokat végzek, egyéni pszichoterápiás folyamatokat vezetek, valamint több éven keresztül analitikus szemléletű kiscsoportokat is vezettem.</p>
 
-        try {
-          localStorage.setItem(storageKey, selected);
-        } catch (e) {}
-      }
+<p>Szakmai tapasztalatom kiterjed kórházi pszichiátriai ellátásra, ambuláns pszichológiai munkára, valamint egyéni és csoportos terápiás helyzetekre.</p>
 
-      let savedLang = defaultLang;
-      try {
-        savedLang = localStorage.getItem(storageKey) || defaultLang;
-      } catch (e) {
-        savedLang = defaultLang;
-      }
 
-      setLanguage(savedLang);
 
-      document.querySelectorAll(".lang-btn").forEach(btn => {
-        btn.addEventListener("click", function () {
-          setLanguage(this.dataset.lang);
-        });
-      });
-    })();
-  </script>
+<h2>Szemléletmódom</h2>
+
+<p>Munkám szemléleti alapját az egzisztenciális pszichológiai, pszichoterápiás valamint fenomenológiai megközelítés adja.</p>
+
+<p>Ez a szemlélet abból indul ki, hogy a pszichés nehézségek nem csupán tünetek formájában jelennek meg, hanem egy adott ember teljes élethelyzetéhez, kapcsolati tapasztalataihoz és személyes történetéhez kapcsolódnak.</p>
+
+<p>A pszichoterápia számomra nem pusztán a tünetek csökkentéséről szól, hanem arról is, hogy az ember képes legyen saját működésére rálátni és felelősen viszonyulni ahhoz.</p>
+
+
+
+<h2>Milyen esetekben vállalok pszichoterápiás munkát</h2>
+
+<ul>
+
+<li>szorongásos problémák</li>
+<li>hangulati zavarok</li>
+<li>élethelyzeti krízisek</li>
+<li>kapcsolati nehézségek</li>
+<li>identitással és önértékeléssel kapcsolatos kérdések</li>
+<li>veszteség és gyász</li>
+<li>traumatikus élmények feldolgozása</li>
+<li>életvezetési és döntési nehézségek</li>
+
+</ul>
+
+
+
+<h2>A közös munka keretei</h2>
+
+<p>Amikor valaki segítséget kér tőlem, az első személyes találkozás során közösen mérjük fel, hogy az adott helyzetben milyen típusú segítség lehet megfelelő.</p>
+
+<p>A pszichoterápiás ülések időtartama 50 perc, és legalább heti egy alkalommal zajlanak.</p>
+
+<p>Ha közös terápiás munkára nem kerül sor, akkor is fontosnak tartom, hogy a konzultáció során világossá váljon, milyen irányban érdemes tovább segítséget keresni.</p>
+
+
+
+<h2>Kapcsolat</h2>
+
+<div class="contact">
+
+<p>Időpont egyeztetés e-mailben történik.</p>
+
+<p>
+<a href="mailto:contact@bodisandras.com">contact@bodisandras.com</a>
+</p>
+
+</div>
+
+</div>
+
+
+
+
+
+<div id="content-en" class="lang">
+
+<div class="intro-layout">
+
+<img src="bodis-andras.jpg" alt="András Bódis clinical psychologist" class="portrait">
+
+<div class="intro-text">
+
+<h1>András Bódis</h1>
+
+<div class="role">clinical psychologist</div>
+
+<h2>Welcome</h2>
+
+<p>Dear Visitor,</p>
+
+<p>If someone is looking for psychological help, it is often not easy to decide whom to turn to. On this page I briefly introduce my professional background, my clinical approach, and the framework within which I undertake psychotherapeutic work.</p>
+
+</div>
+</div>
+
+
+
+<h2>Who I am</h2>
+
+<p>As a clinical psychologist, I have gained more than a decade of professional experience in psychiatric and psychotherapeutic outpatient care.</p>
+
+<p>My work includes psychological assessment, individual psychotherapy, and analytically oriented small group work.</p>
+
+
+
+<h2>Clinical approach</h2>
+
+<p>My work is grounded in existential psychology, psychotherapy and phenomenological thinking.</p>
+
+<p>This perspective views psychological difficulties not only as symptoms but as expressions of a person’s life situation, relational history and personal experience.</p>
+
+
+
+<h2>Areas of work</h2>
+
+<ul>
+
+<li>anxiety related difficulties</li>
+<li>mood related problems</li>
+<li>life crises</li>
+<li>relationship difficulties</li>
+<li>identity related questions</li>
+<li>grief and loss</li>
+<li>processing traumatic experiences</li>
+<li>life management difficulties</li>
+
+</ul>
+
+
+
+<h2>Framework</h2>
+
+<p>The first meeting serves to assess what type of psychological help may be appropriate.</p>
+
+<p>Psychotherapy sessions are 50 minutes long and take place at least once a week.</p>
+
+
+
+<h2>Contact</h2>
+
+<div class="contact">
+
+<p>Appointments are arranged by email.</p>
+
+<p>
+<a href="mailto:contact@bodisandras.com">contact@bodisandras.com</a>
+</p>
+
+</div>
+
+</div>
+
+
+
+<footer>
+
+© Bódis András
+
+</footer>
+
+
+
+<script>
+
+const buttons=document.querySelectorAll(".lang-btn");
+const langs=document.querySelectorAll(".lang");
+
+function setLanguage(lang){
+
+langs.forEach(l=>{
+l.classList.remove("active");
+});
+
+document.getElementById("content-"+lang).classList.add("active");
+
+buttons.forEach(b=>{
+b.classList.remove("active");
+});
+
+document.querySelector('[data-lang="'+lang+'"]').classList.add("active");
+
+localStorage.setItem("siteLang",lang);
+
+}
+
+buttons.forEach(btn=>{
+btn.addEventListener("click",()=>{
+setLanguage(btn.dataset.lang);
+});
+});
+
+const saved=localStorage.getItem("siteLang")||"hu";
+
+setLanguage(saved);
+
+</script>
+
 </body>
 </html>
